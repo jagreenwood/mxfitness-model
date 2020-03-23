@@ -14,6 +14,11 @@ public struct WorkoutCreate: Codable {
 
     public let duration: TimeInterval
     public let type: String
+
+    public init(duration: TimeInterval, type: String) {
+        self.duration = duration
+        self.type = type
+    }
 }
 
 public struct WorkoutResponse: Codable, Equatable {
@@ -25,4 +30,11 @@ public struct WorkoutResponse: Codable, Equatable {
     public let duration: TimeInterval
     public let type: String
     public let user: UserResponse
+
+    public init(id: String, duration: TimeInterval, type: String, user: UserResponse) {
+        self.id = id
+        self.duration = duration
+        self.type = type
+        self.user = user
+    }
 }
