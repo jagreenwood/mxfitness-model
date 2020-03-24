@@ -10,8 +10,8 @@ import Foundation
 public struct ChallengeCreate: Codable, Equatable {
     private enum CodingKeys: String, CodingKey {
         case name
-        case startDate = "start_date"
-        case endDate = "end_date"
+        case startDate = "start-date"
+        case endDate = "end-date"
     }
 
     public let name: String
@@ -28,8 +28,8 @@ public struct ChallengeCreate: Codable, Equatable {
 public struct ChallengeResponse: Codable, Equatable {
     private enum CodingKeys: String, CodingKey {
         case id, name, users
-        case startDate = "start_date"
-        case endDate = "end_date"
+        case startDate = "start-date"
+        case endDate = "end-date"
     }
 
     public let id: String

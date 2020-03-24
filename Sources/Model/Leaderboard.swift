@@ -10,8 +10,8 @@ import Foundation
 public struct Leaderboard: Codable, Equatable {
     private enum CodingKeys: String, CodingKey {
         case name
-        case totalCount = "total_count_users"
-        case totalDuration = "total_duration_users"
+        case totalCount = "total-count-users"
+        case totalDuration = "total-duration-users"
     }
 
     public let name: String
@@ -28,8 +28,8 @@ public struct Leaderboard: Codable, Equatable {
 public struct LeaderboardUser: Codable, Equatable {
     private enum CodingKeys: String, CodingKey {
         case id, name
-        case totalWorkoutCount = "total_workout_count"
-        case totalWorkoutDuration = "total_workout_duration"
+        case totalWorkoutCount = "total-workout-count"
+        case totalWorkoutDuration = "total-workout-duration"
     }
 
     public let id: String
