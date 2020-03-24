@@ -9,4 +9,8 @@ import Foundation
 
 public struct TokenResponse: Codable, Equatable {
     public let token: String
+
+    public init(token: String) {
+        self.token = token
+    }
 }
