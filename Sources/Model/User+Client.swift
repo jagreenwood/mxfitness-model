@@ -28,6 +28,18 @@ public struct UserResponse: Codable, Equatable {
     public let workouts: [WorkoutResponse]
     public let totalWorkoutCount: Int
     public let totalWorkoutDuration: TimeInterval
+
+    public init(id: String, name: String, email: String, avatar: URL, role: String,
+                workouts: [WorkoutResponse], totalWorkoutCount: Int, totalWorkoutDuration: TimeInterval) {
+        self.id = id
+        self.name = name
+        self.email = email
+        self.avatar = avatar
+        self.role = role
+        self.workouts = workouts
+        self.totalWorkoutCount = totalWorkoutCount
+        self.totalWorkoutDuration = totalWorkoutDuration
+    }
 }
 
 public struct UserLogin: Codable {
