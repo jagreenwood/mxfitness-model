@@ -36,9 +36,9 @@ public struct ChallengeResponse: Codable, Equatable {
     public let name: String
     public let startDate: Date
     public let endDate: Date
-    public let users: [UserResponse]
+    public let users: [BaseUserResponse]
 
-    public init(id: String, name: String, startDate: Date, endDate: Date, users: [UserResponse]) {
+    public init(id: String, name: String, startDate: Date, endDate: Date, users: [BaseUserResponse]) {
         self.id = id
         self.name = name
         self.startDate = startDate

@@ -13,27 +13,43 @@ public struct UserCreate: Codable, Equatable {
     public var password: String
 }
 
+public struct BaseUserResponse: Codable, Equatable {
+    public enum CodingKeys: String, CodingKey {
+        case id, name, avatar, role
+    }
+
+    public let id: String
+    public let name: String
+    public let avatar: URL
+    public let role: String
+
+    public init(id: String, name: String, avatar: URL, role: String) {
+        self.id = id
+        self.name = name
+        self.avatar = avatar
+        self.role = role
+    }
+}
+
 public struct UserResponse: Codable, Equatable {
     public enum CodingKeys: String, CodingKey {
-        case id, name, email, avatar, role, workouts
+        case id, name, avatar, role, workouts
         case totalWorkoutCount = "total-workout-count"
         case totalWorkoutDuration = "total-workout-duration"
     }
 
     public let id: String
     public let name: String
-    public let email: String
     public let avatar: URL
     public let role: String
     public let workouts: [WorkoutResponse]
     public let totalWorkoutCount: Int
     public let totalWorkoutDuration: TimeInterval
 
-    public init(id: String, name: String, email: String, avatar: URL, role: String,
+    public init(id: String, name: String, avatar: URL, role: String,
                 workouts: [WorkoutResponse], totalWorkoutCount: Int, totalWorkoutDuration: TimeInterval) {
         self.id = id
         self.name = name
-        self.email = email
         self.avatar = avatar
         self.role = role
         self.workouts = workouts

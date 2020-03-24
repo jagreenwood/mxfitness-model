@@ -27,19 +27,21 @@ public struct Leaderboard: Codable, Equatable {
 
 public struct LeaderboardUser: Codable, Equatable {
     private enum CodingKeys: String, CodingKey {
-        case id, name
-        case totalWorkoutCount = "total-workout-count"
+        case id, name, avatar
+        case totalWorkoutCount = "total_workout_count"
         case totalWorkoutDuration = "total-workout-duration"
     }
 
     public let id: String
     public let name: String
+    public let avatar: URL
     public let totalWorkoutCount: Int
     public let totalWorkoutDuration: TimeInterval
 
-    public init(id: String, name: String, totalWorkoutCount: Int, totalWorkoutDuration: TimeInterval) {
+    public init(id: String, name: String, avatar: URL, totalWorkoutCount: Int, totalWorkoutDuration: TimeInterval) {
         self.id = id
         self.name = name
+        self.avatar = avatar
         self.totalWorkoutCount = totalWorkoutCount
         self.totalWorkoutDuration = totalWorkoutDuration
     }

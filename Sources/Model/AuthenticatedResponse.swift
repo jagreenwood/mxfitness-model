@@ -8,10 +8,10 @@
 import Foundation
 
 public struct AuthenticatedResponse<T: Codable>: Codable {
-    public let user: UserResponse
+    public let user: BaseUserResponse
     public let response: T
 
-    public init(user: UserResponse, response: T) {
+    public init(user: BaseUserResponse, response: T) {
         self.user = user
         self.response = response
     }

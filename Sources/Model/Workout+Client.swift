@@ -29,9 +29,9 @@ public struct WorkoutResponse: Codable, Equatable {
     public let id: String
     public let duration: TimeInterval
     public let type: String
-    public let user: UserResponse
+    public let user: BaseUserResponse
 
-    public init(id: String, duration: TimeInterval, type: String, user: UserResponse) {
+    public init(id: String, duration: TimeInterval, type: String, user: BaseUserResponse) {
         self.id = id
         self.duration = duration
         self.type = type
