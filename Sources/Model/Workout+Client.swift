@@ -10,12 +10,15 @@ import Foundation
 public struct WorkoutCreate: Codable {
     private enum CodingKeys: String, CodingKey {
         case duration, type
+        case startDate = "start-date"
     }
 
+    public let startDate: Date
     public let duration: TimeInterval
     public let type: String
 
-    public init(duration: TimeInterval, type: String) {
+    public init(startDate: Date, duration: TimeInterval, type: String) {
+        self.startDate = startDate
         self.duration = duration
         self.type = type
     }
