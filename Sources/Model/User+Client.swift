@@ -20,10 +20,10 @@ public struct BaseUserResponse: Codable, Equatable {
 
     public let id: String
     public let name: String
-    public let avatar: URL
+    public let avatar: String
     public let role: String
 
-    public init(id: String, name: String, avatar: URL, role: String) {
+    public init(id: String, name: String, avatar: String, role: String) {
         self.id = id
         self.name = name
         self.avatar = avatar
@@ -40,13 +40,13 @@ public struct UserResponse: Codable, Equatable {
 
     public let id: String
     public let name: String
-    public let avatar: URL
+    public let avatar: String
     public let role: String
     public let workouts: [WorkoutResponse]
     public let totalWorkoutCount: Int
     public let totalWorkoutDuration: TimeInterval
 
-    public init(id: String, name: String, avatar: URL, role: String,
+    public init(id: String, name: String, avatar: String, role: String,
                 workouts: [WorkoutResponse], totalWorkoutCount: Int, totalWorkoutDuration: TimeInterval) {
         self.id = id
         self.name = name
