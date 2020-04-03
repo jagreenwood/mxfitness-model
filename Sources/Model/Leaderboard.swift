@@ -28,7 +28,7 @@ public struct Leaderboard: Codable, Equatable {
 public struct LeaderboardUser: Codable, Equatable {
     private enum CodingKeys: String, CodingKey {
         case id, name, avatar
-        case totalWorkoutCount = "total_workout_count"
+        case totalWorkoutCount = "total-workout-count"
         case totalWorkoutDuration = "total-workout-duration"
     }
 
