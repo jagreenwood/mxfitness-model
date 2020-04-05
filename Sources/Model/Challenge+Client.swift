@@ -15,10 +15,10 @@ public struct ChallengeCreate: Codable, Equatable {
     }
 
     public let name: String
-    public let startDate: Date
-    public let endDate: Date
+    public let startDate: String
+    public let endDate: String
 
-    public init(name: String, startDate: Date, endDate: Date) {
+    public init(name: String, startDate: String, endDate: String) {
         self.name = name
         self.startDate = startDate
         self.endDate = endDate
@@ -34,11 +34,11 @@ public struct ChallengeResponse: Codable, Equatable {
 
     public let id: String
     public let name: String
-    public let startDate: Date
-    public let endDate: Date
+    public let startDate: String
+    public let endDate: String
     public let users: [BaseUserResponse]
 
-    public init(id: String, name: String, startDate: Date, endDate: Date, users: [BaseUserResponse]) {
+    public init(id: String, name: String, startDate: String, endDate: String, users: [BaseUserResponse]) {
         self.id = id
         self.name = name
         self.startDate = startDate
